@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+
+* {
+    margin:0; padding:0;
+    box-sizing:border-box;
+}
+   
+img {
+	display:block;
+	max-width:100%;
+}
+#layout {
+	max-width:1200px; margin:auto; border:2px solid red;
+}
+
+/*상단*/
+#header {
+	width:100%; height:152%; border:none;
+	display:block;
+	position:relative; z-index:1;
+}
+
+/*첫화면*/
+#index main {
+	position:relative;
+}
+#index main img:not(:first-child) {
+	position:absolute; top:0; /*이미지 3개가 겹친다*/
+}
+
+/*메뉴판 페이지*/
+#menus main{
+	display:flex; flex-wrap:wrap;
+	justify-content:space-around;
+}
+#menus section {
+	border:2px solid red; margin-bottom:20px;
+	cursor:pointer; position:relative;
+	overflow:hidden;
+}
+#menus section div {
+	position:absolute; width:100%;
+	background:#e8521d; top:333px;
+	padding:15px; color:white;
+	transition:0.5s;
+}
+#menus section:hover div {
+	top:70%
+}
+#menus p {
+	font-size:0.85;
+}
+
+/*미디어 페이지*/
+#media img {
+	margin:auto;
+}
+
+/*모든 페이지 공통으로 애니메이션*/
+main {animation: down 1s;}
+@keyframes down {
+	from        {opacity:0; transform:translateY(-50px);}
+	to          {opacity:1; transform:translateY(0px);}
+}
+
+
+
+/*하단*/
+#footer {
+	width:100%; height:199px;
+	display:block; border:none;
+}
+
+absolute 하려
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
